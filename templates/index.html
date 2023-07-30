@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joseph Bocanegra</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css')}}"
+    />
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Joseph Bocanegra</h1>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Coming Soon</p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p>Info about projects</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact me</h2>
+      <p>Your contact information goes here.</p>
+      <form action="http://localhost:5000/contact" method="post">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">Email:</label><br />
+        <input type="text" id="email" name="email" /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message"></textarea><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+  </body>
+</html>
